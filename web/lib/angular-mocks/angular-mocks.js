@@ -2620,8 +2620,8 @@ angular.mock.$ComponentControllerProvider = ['$compileProvider',
  * @packageName angular-mocks
  * @description
  *
- * The `ngMock` module provides support to inject and mock AngularJS services into unit tests.
- * In addition, ngMock also extends various core AngularJS services such that they can be
+ * The `ngMock` module provides support to inject and mock AngularJS springxml.services into unit tests.
+ * In addition, ngMock also extends various core AngularJS springxml.services such that they can be
  * inspected and controlled in a synchronous manner within test code.
  *
  * @installation

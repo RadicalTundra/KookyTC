@@ -93,7 +93,7 @@ server config](https://github.com/h5bp/server-configs).
 
 Starting with Internet Explorer 11, [document modes are
 deprecated](https://msdn.microsoft.com/library/bg182625.aspx#docmode).
-If your business still relies on older web apps and services that were
+If your business still relies on older web apps and springxml.services that were
 designed for older versions of Internet Explorer, you might want to consider
 enabling [Enterprise Mode](https://blogs.msdn.microsoft.com/ie/2014/04/02/stay-up-to-date-with-enterprise-mode-for-internet-explorer-11/) throughout your company.
 
@@ -207,7 +207,7 @@ The first issue is no longer valid and the second is far outweighed by
 being able to serve jQuery to Chinese users.
 
 While the jQuery CDN is a strong default solution your site or application may
-require a different configuration. Testing your site with services like
+require a different configuration. Testing your site with springxml.services like
 [WebPageTest](https://www.webpagetest.org/) and browser tools like
 [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or
 [YSlow](https://developer.yahoo.com/yslow/) will help you examine the real

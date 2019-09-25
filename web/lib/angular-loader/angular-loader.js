@@ -247,7 +247,7 @@ function setupModuleLoader(window) {
      *
      * # Module
      *
-     * A module is a collection of services, directives, controllers, filters, and configuration information.
+     * A module is a collection of springxml.services, directives, controllers, filters, and configuration information.
      * `angular.module` is used to configure the {@link auto.$injector $injector}.
      *
      * ```js
@@ -257,7 +257,7 @@ function setupModuleLoader(window) {
      * // register a new service
      * myModule.value('appName', 'MyCoolApp');
      *
-     * // configure existing services inside initialization blocks.
+     * // configure existing springxml.services inside initialization blocks.
      * myModule.config(['$locationProvider', function($locationProvider) {
      *   // Configure existing providers
      *   $locationProvider.hashPrefix('!');
@@ -548,14 +548,14 @@ function setupModuleLoader(window) {
            * @param {Function} configFn Execute this function on module load. Useful for service
            *    configuration.
            * @description
-           * Use this method to configure services by injecting their
+           * Use this method to configure springxml.services by injecting their
            * {@link angular.Module#provider `providers`}, e.g. for adding routes to the
            * {@link ngRoute.$routeProvider $routeProvider}.
            *
            * Note that you can only inject {@link angular.Module#provider `providers`} and
            * {@link angular.Module#constant `constants`} into this function.
            *
-           * For more about how to configure services, see
+           * For more about how to configure springxml.services, see
            * {@link providers#provider-recipe Provider Recipe}.
            */
           config: config,

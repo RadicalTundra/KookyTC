@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Apache Derby (Embedded) - KookyDB" uuid="bb4cd36e-bb58-4f87-a92b-80a358fe0ca4">
+    <data-source source="LOCAL" name="KookyDB" uuid="4a32d75f-a8a3-43f6-b391-1fe22da814ca">
       <driver-ref>derby.embedded</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>

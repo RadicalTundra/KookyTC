@@ -92,7 +92,7 @@ var noop;
  * @name ngRoute
  * @description
  *
- * The `ngRoute` module provides routing and deeplinking services and directives for AngularJS apps.
+ * The `ngRoute` module provides routing and deeplinking springxml.services and directives for AngularJS apps.
  *
  * ## Example
  * See {@link ngRoute.$route#examples $route} for an example of configuring and using `ngRoute`.
@@ -544,7 +544,7 @@ function $RouteProvider() {
      * @name $route#$routeChangeStart
      * @eventType broadcast on root scope
      * @description
-     * Broadcasted before a route change. At this  point the route services starts
+     * Broadcasted before a route change. At this  point the route springxml.services starts
      * resolving all of the dependencies needed for the route change to occur.
      * Typically this involves fetching the view template as well as any dependencies
      * defined in `resolve` route property. Once  all of the dependencies are resolved

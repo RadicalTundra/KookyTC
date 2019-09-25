@@ -252,7 +252,7 @@ function minErr(module, ErrorConstructor) {
  *
  * The ng module is loaded by default when an AngularJS application is started. The module itself
  * contains the essential components for an AngularJS application to function. The table below
- * lists a high level breakdown of each of the services/factories, filters, directives and testing
+ * lists a high level breakdown of each of the springxml.services/factories, filters, directives and testing
  * components available within this core module.
  *
  */
@@ -2237,7 +2237,7 @@ function setupModuleLoader(window) {
      *
      * # Module
      *
-     * A module is a collection of services, directives, controllers, filters, and configuration information.
+     * A module is a collection of springxml.services, directives, controllers, filters, and configuration information.
      * `angular.module` is used to configure the {@link auto.$injector $injector}.
      *
      * ```js
@@ -2247,7 +2247,7 @@ function setupModuleLoader(window) {
      * // register a new service
      * myModule.value('appName', 'MyCoolApp');
      *
-     * // configure existing services inside initialization blocks.
+     * // configure existing springxml.services inside initialization blocks.
      * myModule.config(['$locationProvider', function($locationProvider) {
      *   // Configure existing providers
      *   $locationProvider.hashPrefix('!');
@@ -2538,14 +2538,14 @@ function setupModuleLoader(window) {
            * @param {Function} configFn Execute this function on module load. Useful for service
            *    configuration.
            * @description
-           * Use this method to configure services by injecting their
+           * Use this method to configure springxml.services by injecting their
            * {@link angular.Module#provider `providers`}, e.g. for adding routes to the
            * {@link ngRoute.$routeProvider $routeProvider}.
            *
            * Note that you can only inject {@link angular.Module#provider `providers`} and
            * {@link angular.Module#constant `constants`} into this function.
            *
-           * For more about how to configure services, see
+           * For more about how to configure springxml.services, see
            * {@link providers#provider-recipe Provider Recipe}.
            */
           config: config,
@@ -4185,7 +4185,7 @@ var $$MapProvider = [/** @this */function() {
  * @kind function
  *
  * @description
- * Creates an injector object that can be used for retrieving services as well as for
+ * Creates an injector object that can be used for retrieving springxml.services as well as for
  * dependency injection (see {@link guide/di dependency injection}).
  *
  * @param {Array.<string|Function>} modules A list of module functions or their aliases. See
@@ -4438,7 +4438,7 @@ function annotate(fn, strictDi, name) {
  *
  * @description
  * Returns an array of service names which the function is requesting for injection. This API is
- * used by the injector to determine which services need to be injected into the function when the
+ * used by the injector to determine which springxml.services need to be injected into the function when the
  * function is invoked. There are three ways in which the function can be annotated with the needed
  * dependencies.
  *
@@ -4465,7 +4465,7 @@ function annotate(fn, strictDi, name) {
  * #### The `$inject` property
  *
  * If a function has an `$inject` property and its value is an array of strings, then the strings
- * represent names of services to be injected into the function.
+ * represent names of springxml.services to be injected into the function.
  * ```js
  *   // Given
  *   var MyController = function(obfuscatedScope, obfuscatedRoute) {
@@ -4513,7 +4513,7 @@ function annotate(fn, strictDi, name) {
  *
  * @param {boolean=} [strictDi=false] Disallow argument name annotation inference.
  *
- * @returns {Array.<string>} The names of the services which the function requires.
+ * @returns {Array.<string>} The names of the springxml.services which the function requires.
  */
 /**
  * @ngdoc method
@@ -4575,17 +4575,17 @@ function annotate(fn, strictDi, name) {
  * correct **service provider**, instantiating it and then calling its `$get` **service factory**
  * function to get the instance of the **service**.
  *
- * Often services have no configuration options and there is no need to add methods to the service
+ * Often springxml.services have no configuration options and there is no need to add methods to the service
  * provider.  The provider will be no more than a constructor function with a `$get` property. For
  * these cases the {@link auto.$provide $provide} service has additional helper methods to register
- * services without specifying a provider.
+ * springxml.services without specifying a provider.
  *
  * * {@link auto.$provide#provider provider(name, provider)} - registers a **service provider** with the
  *     {@link auto.$injector $injector}
  * * {@link auto.$provide#constant constant(name, obj)} - registers a value/object that can be accessed by
- *     providers and services.
+ *     providers and springxml.services.
  * * {@link auto.$provide#value value(name, obj)} - registers a value/object that can only be accessed by
- *     services, not providers.
+ *     springxml.services, not providers.
  * * {@link auto.$provide#factory factory(name, fn)} - registers a service **factory function**
  *     that will be wrapped in a **service provider** object, whose `$get` property will contain the
  *     given factory function.
@@ -4793,9 +4793,9 @@ function annotate(fn, strictDi, name) {
  * Register a **value service** with the {@link auto.$injector $injector}, such as a string, a
  * number, an array, an object or a function. This is short for registering a service where its
  * provider's `$get` property is a factory function that takes no arguments and returns the **value
- * service**. That also means it is not possible to inject other services into a value service.
+ * service**. That also means it is not possible to inject other springxml.services into a value service.
  *
- * Value services are similar to constant services, except that they cannot be injected into a
+ * Value springxml.services are similar to constant springxml.services, except that they cannot be injected into a
  * module configuration function (see {@link angular.Module#config}) but they can be overridden by
  * an AngularJS {@link auto.$provide#decorator decorator}.
  *
@@ -4804,7 +4804,7 @@ function annotate(fn, strictDi, name) {
  * @returns {Object} registered provider instance
  *
  * @example
- * Here are some examples of creating value services.
+ * Here are some examples of creating value springxml.services.
  * ```js
  *   $provide.value('ADMIN_USER', 'admin');
  *
@@ -4824,7 +4824,7 @@ function annotate(fn, strictDi, name) {
  *
  * Register a **constant service** with the {@link auto.$injector $injector}, such as a string,
  * a number, an array, an object or a function. Like the {@link auto.$provide#value value}, it is not
- * possible to inject other services into a constant.
+ * possible to inject other springxml.services into a constant.
  *
  * But unlike {@link auto.$provide#value value}, a constant can be
  * injected into a module configuration function (see {@link angular.Module#config}) and it cannot
@@ -18437,8 +18437,8 @@ function $RootScopeProvider() {
      *
      * @param {Object.<string, function()>=} providers Map of service factory which need to be
      *                                       provided for the current scope. Defaults to {@link ng}.
-     * @param {Object.<string, *>=} instanceCache Provides pre-instantiated services which should
-     *                              append/override services provided by `providers`. This is handy
+     * @param {Object.<string, *>=} instanceCache Provides pre-instantiated springxml.services which should
+     *                              append/override springxml.services provided by `providers`. This is handy
      *                              when unit-testing and having the need to override a default
      *                              service.
      * @returns {Object} Newly created scope.
@@ -19962,7 +19962,7 @@ function adjustMatchers(matchers) {
  * @description
  *
  * `$sceDelegate` is a service that is used by the `$sce` service to provide {@link ng.$sce Strict
- * Contextual Escaping (SCE)} services to AngularJS.
+ * Contextual Escaping (SCE)} springxml.services to AngularJS.
  *
  * For an overview of this service and the functionnality it provides in AngularJS, see the main
  * page for {@link ng.$sce SCE}. The current page is targeted for developers who need to alter how
@@ -20352,7 +20352,7 @@ function $SceDelegateProvider() {
  *
  * @description
  *
- * `$sce` is a service that provides Strict Contextual Escaping services to AngularJS.
+ * `$sce` is a service that provides Strict Contextual Escaping springxml.services to AngularJS.
  *
  * ## Strict Contextual Escaping
  *
@@ -21309,7 +21309,7 @@ function $TemplateRequestProvider() {
    * `$templateRequest` is used internally by {@link $compile}, {@link ngRoute.$route}, and directives such
    * as {@link ngInclude} to download and cache templates.
    *
-   * 3rd party modules should use `$templateRequest` if their services or directives are loading
+   * 3rd party modules should use `$templateRequest` if their springxml.services or directives are loading
    * templates.
    *
    * @param {string|TrustedResourceUrl} tpl The HTTP request template URL
@@ -21973,7 +21973,7 @@ function $$CookieReaderProvider() {
  * @description
  * Filters are used for formatting data displayed to the user.
  *
- * They can be used in view templates, controllers or services. AngularJS comes
+ * They can be used in view templates, controllers or springxml.services. AngularJS comes
  * with a collection of [built-in filters](api/ng/filter), but it is easy to
  * define your own as well.
  *
@@ -30039,7 +30039,7 @@ var ngModelMinErr = minErr('ngModel');
  * @description
  *
  * `NgModelController` provides API for the {@link ngModel `ngModel`} directive.
- * The controller contains services for data-binding, validation, CSS updates, and value formatting
+ * The controller contains springxml.services for data-binding, validation, CSS updates, and value formatting
  * and parsing. It purposefully does not contain any logic which deals with DOM rendering or
  * listening to DOM events.
  * Such DOM related logic should be provided by other directives which make use of
