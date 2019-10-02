@@ -51,5 +51,6 @@
     </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.22" level="application_server_libraries" />
     <orderEntry type="library" name="Spring" level="application" />
+    <orderEntry type="library" name="Spring MVC-4.3.18.RELEASE" level="project" />
   </component>
 </module>
