@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:class.properties"/>
+
+    <bean id="addObject" class="springxml.services.AddObject"></bean>
+
+    <bean id="myDeck" class="springxml.beans.Deck">
+        <property name="deck_name" value="${d1.deck_name}"/>
+    </bean>
+
+    <bean id="myCard" class="springxml.beans.Card">
+        <property name="service" ref="addObject"/>
+        <property name="api_id" value="${c1.api_id}"/>
+        <property name="assignedDeck" ref="myDeck"/>
+        <property name="card_id" value="${c1.card_id}"/>
+    </bean>
+
+
+</beans>
