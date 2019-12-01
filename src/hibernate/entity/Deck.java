@@ -43,6 +43,16 @@ public class Deck {
     public Deck() {
     }
 
+    public Deck(String deck_name, int spell_count, int creature_count, int planeswalker_count, int artifact_count, int enchantment_count, int land_count) {
+        this.deck_name = deck_name;
+        this.spell_count = spell_count;
+        this.creature_count = creature_count;
+        this.planeswalker_count = planeswalker_count;
+        this.artifact_count = artifact_count;
+        this.enchantment_count = enchantment_count;
+        this.land_count = land_count;
+    }
+
     public Deck(User assignedUser, List<Card> cards, String deck_name, int spell_count, int creature_count, int planeswalker_count, int artifact_count, int enchantment_count, int land_count) {
         this.assignedUser = assignedUser;
         this.cards = cards;

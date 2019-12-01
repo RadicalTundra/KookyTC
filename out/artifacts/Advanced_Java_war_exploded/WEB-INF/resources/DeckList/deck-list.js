@@ -9,7 +9,7 @@ angular.module('myApp.deckList', ['ngRoute'])
         });
     }])
 
-    .controller('deckListCtrl', function($rootScope, $scope) {
+    .controller('deckListCtrl', function($rootScope, $scope, $http) {
         $scope.deck = $rootScope.decklist;
 
         $scope.removeFromDeck = function(index)
@@ -19,5 +19,18 @@ angular.module('myApp.deckList', ['ngRoute'])
         $scope.setCard = function(card)
         {
             $rootScope.selectedCard = card;
+        }
+        $scope.saveDeck = function(deck)
+        {
+            console.log(deck);
+            $http({
+                method: 'POST',
+                url: "Advanced_Java_war_exploded/saveDeck",
+                spell_count: "5"
+            }).then(function successCallBack(response){
+                    console.log(response);
+            }, function errorCallBack(response){
+               console.log(response);
+            });
         }
     });

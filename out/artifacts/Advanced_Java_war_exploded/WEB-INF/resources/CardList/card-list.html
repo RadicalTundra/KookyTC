@@ -17,7 +17,7 @@
         </div>
     </div>
     <div ng-hide="cards.length === 0" class="row">
-        <div class="row" ng-repeat="card in cards track by $index">
+        <div ng-repeat="card in cards track by $index">
             <div class="col-sm m-2">
                 <label for="card{{$index}}">
                     <img src="{{card.image_uris.png}}" width="250" height="350" style="cursor: pointer">

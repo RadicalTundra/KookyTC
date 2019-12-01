@@ -19,4 +19,5 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 app.run(function ($rootScope){
   $rootScope.decklist = [];
   $rootScope.selectedCard = [];
+  $rootScope.cards = [];
 });
