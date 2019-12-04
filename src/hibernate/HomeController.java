@@ -19,6 +19,10 @@ public class HomeController {
     public String showHomePage(){
         return "index";
     }
+    @RequestMapping("/DeckList")
+    public String showDeckList(){
+        return "DeckList";
+    }
 
     @PostMapping("/saveDeck")
     public String saveDeck(@ModelAttribute(name = "aDeck") Deck theDeck,

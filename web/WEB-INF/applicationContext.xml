@@ -10,7 +10,7 @@
     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <!-- JDBC Database connection settings -->
         <property name="driverClass" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-        <property name="jdbcUrl" value="jdbc:derby:D:/KookyTC/lib/KookyDB"/>
+        <property name="jdbcUrl" value="C:\Users\bitstudent\IdeaProjects\KookyTC\lib\KookyDB"/>
         <property name="user" value="Tyler"/>
         <property name="password" value="Tyler"/>
 

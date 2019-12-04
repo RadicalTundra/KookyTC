@@ -71,9 +71,9 @@ public class HibernateApp {
         session.beginTransaction();
         Deck deck1 = session.get(Deck.class, 1);
 
-        Card card = new Card("505932ef-3791-4253-8a2a-b6a02ef45ab4",
-                deck1, 20);
-        session.save(card);
+        //Card card = new Card("505932ef-3791-4253-8a2a-b6a02ef45ab4",
+             //   deck1, 20);
+        //session.save(card);
 
         session.getTransaction().commit();
     }
@@ -161,7 +161,7 @@ public class HibernateApp {
         Card aCard = session.get(Card.class, cardId);
         if (aCard != null) {
             //WOW! You're rich! You have so many of that card now!
-            aCard.setNumOfCards(aCard.getNumOfCards() + 50);
+            //aCard.setNumOfCards(aCard.getNumOfCards() + 50);
         }
         else
         {

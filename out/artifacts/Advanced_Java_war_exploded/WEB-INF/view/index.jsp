@@ -1,4 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <html>
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,17 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My AngularJS App</title>
     <meta name="description" content="">
-    <script src="resources/lib/angular/angular.js"></script>
-    <script src="resources/lib/angular-route/angular-route.js"></script>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.7.8/angular-touch.js"></script>
     <script src="resources/lib/uib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script src="resources/app.js"></script>
-    <script src="resources/Home/home.js"></script>
-    <script src="resources/CardList/card-list.js"></script>
-    <script src="resources/CardDetail/card-detail.js"></script>
-    <script src="resources/DeckList/deck-list.js"></script>
     <script src="resources/core/version/version.js"></script>
     <script src="resources/core/version/version-directive.js"></script>
     <script src="resources/core/version/interpolate-filter.js"></script>
@@ -39,12 +32,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#!/Home" style="font-family: 'Book Antiqua'">Kooky Cards</a>
+        <a class="navbar-brand" href="${contextPath}/" style="font-family: 'Book Antiqua'">Kooky Cards</a>
     </div>
     <div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
         <ul class="nav navbar-nav">
-            <li><a href="#!/CardList">Cards</a></li>
-            <li><a href="#!/DeckList">Your Deck</a></li>
+            <li><a href="${contextPath}/card/List">Cards</a></li>
+            <li><a href="${contextPath}/DeckList">Your Deck</a></li>
         </ul>
     </div>
 </nav>
@@ -53,7 +46,9 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div ng-view></div>
+<div>
+    <h3>hello tyler</h3>
+</div>
 
 
 <!-- In production use:

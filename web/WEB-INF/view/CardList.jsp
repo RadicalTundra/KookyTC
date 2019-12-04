@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title>List of All Cards</title>
     <meta name="description" content="">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="resources/lib/uib/ui-bootstrap-tpls-2.5.0.min.js"></script>
@@ -23,7 +23,7 @@
     <script src="resources/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-app="myApp">
-<img src="resources/pics/wacky.png" height="75" width="75">
+<img src="${contextPath}/resources/pics/wacky.png" height="75" width="75">
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
@@ -36,7 +36,7 @@
     </div>
     <div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
         <ul class="nav navbar-nav">
-            <li><a href="${contextPath}/card/List">Cards</a></li>
+            <li><a href="${contextPath}/CardList">Cards</a></li>
             <li><a href="${contextPath}/DeckList">Your Deck</a></li>
         </ul>
     </div>
@@ -45,14 +45,6 @@
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
-<div>
-    <h3>hello tyler</h3>
-</div>
-
-
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
+<a class="btn btn-success" href="${contextPath}/card/showAddCardForm">Add a New Card</a>
 </body>
 </html>
