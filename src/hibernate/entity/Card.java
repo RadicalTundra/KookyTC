@@ -1,7 +1,5 @@
 package hibernate.entity;
 
-import org.hibernate.Incubating;
-
 import javax.persistence.*;
 
 @Entity
@@ -22,7 +20,7 @@ public class Card {
     private Deck assignedDeck;
 
     @Column(name = "image")
-    private String image;
+    private String imageFileName;
 
     @Column(name = "card_type")
     private String card_type;
@@ -48,9 +46,9 @@ public class Card {
     public Card() {
     }
 
-    public Card(Deck assignedDeck, String image, String card_type, String card_name, String card_set, int power, int toughness, String card_cost, String artist) {
+    public Card(Deck assignedDeck, String imageFileName, String card_type, String card_name, String card_set, int power, int toughness, String card_cost, String artist) {
         this.assignedDeck = assignedDeck;
-        this.image = image;
+        this.imageFileName = imageFileName;
         this.card_type = card_type;
         this.card_name = card_name;
         this.card_set = card_set;
@@ -76,12 +74,12 @@ public class Card {
         this.assignedDeck = assignedDeck;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageFileName() {
+        return imageFileName;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageFileName(String image) {
+        this.imageFileName = image;
     }
 
     public String getCard_type() {
@@ -145,7 +143,7 @@ public class Card {
         return "Card{" +
                 "card_id=" + card_id +
                 ", assignedDeck=" + assignedDeck +
-                ", image='" + image + '\'' +
+                ", image='" + imageFileName + '\'' +
                 ", card_type='" + card_type + '\'' +
                 ", card_name='" + card_name + '\'' +
                 ", card_set='" + card_set + '\'' +

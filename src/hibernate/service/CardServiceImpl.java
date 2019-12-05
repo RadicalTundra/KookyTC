@@ -30,7 +30,7 @@ public class CardServiceImpl implements CardService {
 
         String fileName = imageFileService.saveFile(file, applicationPath);
         if (fileName != null) {
-            aCard.setImage(fileName);
+            aCard.setImageFileName(fileName);
         }
 
 

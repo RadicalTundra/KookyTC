@@ -8,20 +8,14 @@
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
+    <title>Edit Card</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>List of All Cards</title>
     <meta name="description" content="">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="resources/lib/uib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script src="resources/core/version/version.js"></script>
-    <script src="resources/core/version/version-directive.js"></script>
-    <script src="resources/core/version/interpolate-filter.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="resources/app.css">
-    <script src="resources/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="${contextPath}/resources/css/card-form-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="${contextPath}/resources/js/card-form-js.js"/>
 </head>
 <body ng-app="myApp">
 <img src="${contextPath}/resources/pics/wacky.png" height="75" width="75">
@@ -42,7 +36,6 @@
         </ul>
     </div>
 </nav>
-
 <div class="container">
 
     <div>
@@ -52,7 +45,7 @@
         <form:form action="${contextPath}/card/save" enctype="multipart/form-data" modelAttribute="card"
                    method="post" id="cardForm">
             <form:hidden path="card_id" value="${card.card_id}"/>
-            <form:hidden path="imageFileName" value="${card.imageFileName}"/>
+            <form:hidden path="image" value="${card.image}"/>
 
             <table>
                 <tr>
@@ -97,10 +90,10 @@
                     <td><label>Image</label></td>
                     <td>
                         <input type="file" name="image">
-                        <c:if test="${card.imageFileName != null}">
+                        <c:if test="${card.image != null}">
                             <br/><br/>
-                            <img src="${contextPath}/resources/pics/userCardPics/" alt="${card.name}">
-                            <br/>${card.imageFileName}
+                            <img src="${contextPath}/resources/pics/userCardPics/${card.image}" alt="${card.name}">
+                            <br/>${card.image}
                         </c:if>
                     </td>
                 </tr>
