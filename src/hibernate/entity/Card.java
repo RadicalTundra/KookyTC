@@ -1,6 +1,9 @@
 package hibernate.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "cards")
@@ -22,12 +25,17 @@ public class Card {
     @Column(name = "image")
     private String imageFileName;
 
+    @NotNull(message = "required")
     @Column(name = "card_type")
     private String card_type;
 
+    @NotNull(message = "required")
+    @Size(min = 1, message = "must be greater than 0")
     @Column(name = "card_name")
     private String card_name;
 
+    @NotNull(message = "required")
+    @Size(min = 1, message = "must be greater than 0")
     @Column(name = "card_set")
     private String card_set;
 

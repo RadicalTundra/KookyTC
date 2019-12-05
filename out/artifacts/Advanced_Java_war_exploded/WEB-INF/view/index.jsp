@@ -12,15 +12,7 @@
     <title>My AngularJS App</title>
     <meta name="description" content="">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="resources/lib/uib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script src="resources/core/version/version.js"></script>
-    <script src="resources/core/version/version-directive.js"></script>
-    <script src="resources/core/version/interpolate-filter.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="resources/app.css">
-    <script src="resources/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-app="myApp">
 <img src="resources/pics/wacky.png" height="75" width="75">
@@ -46,8 +38,10 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div>
-    <h3>hello tyler</h3>
+<div style="margin-left: 2em;">
+    <h3>We got some Kooky Cards for you to browse and create!</h3>
+    <p>Click below to see our list of cards!</p>
+    <a href="${contextPath}/card/List" class="btn btn-primary">Sweet Cards</a>
 </div>
 
 

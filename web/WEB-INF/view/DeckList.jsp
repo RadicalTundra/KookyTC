@@ -12,18 +12,9 @@
     <title>List of All Decks</title>
     <meta name="description" content="">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="resources/lib/uib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script src="resources/core/version/version.js"></script>
-    <script src="resources/core/version/version-directive.js"></script>
-    <script src="resources/core/version/interpolate-filter.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="resources/lib/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="resources/app.css">
-    <script src="resources/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-app="myApp">
-<img src="resources/pics/wacky.png" height="75" width="75">
+<img src="${contextPath}/resources/pics/wacky.png" height="75" width="75">
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
@@ -36,7 +27,7 @@
     </div>
     <div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
         <ul class="nav navbar-nav">
-            <li><a href="${contextPath}/CardList">Cards</a></li>
+            <li><a href="${contextPath}/card/List">Cards</a></li>
             <li><a href="${contextPath}/DeckList">Your Deck</a></li>
         </ul>
     </div>
